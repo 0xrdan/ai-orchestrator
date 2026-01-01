@@ -280,6 +280,26 @@ ai-orchestrator/
 
 ---
 
+## Part of the Context Continuity Stack
+
+This repo provides **context-aware model dispatch** — routing queries to the right model based on complexity, ensuring efficient use of context and compute.
+
+| Layer | Role | This Repo |
+|-------|------|-----------|
+| Intra-session | Short-term memory | — |
+| Document-scoped | Injected content | — |
+| Retrieved | Long-term semantic memory | — |
+| **Dispatch** | **Route queries to optimal model** | **ai-orchestrator** |
+
+Context continuity isn't just about *what* context to include — it's also about *which model* should process it. Simple queries don't need Opus-level reasoning. Complex analysis shouldn't be handled by a fast/cheap model. The orchestrator makes this decision automatically.
+
+**Related repos:**
+- [rag-pipeline](https://github.com/0xrdan/rag-pipeline) — Semantic retrieval for context
+- [mcp-rag-server](https://github.com/0xrdan/mcp-rag-server) — RAG as MCP tools
+- [chatbot-widget](https://github.com/0xrdan/chatbot-widget) — Session cache, Research Mode, conversation export
+
+---
+
 ## Contributing
 
 Contributions welcome! Please:
